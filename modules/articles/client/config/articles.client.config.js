@@ -9,7 +9,7 @@
 
   function menuConfig(Menus) {
     Menus.addMenuItem('topbar', {
-      title: 'Articles',
+      title: 'Claims',
       state: 'articles',
       type: 'dropdown',
       roles: ['*']
@@ -17,13 +17,13 @@
 
     // Add the dropdown list item
     Menus.addSubMenuItem('topbar', 'articles', {
-      title: 'List Articles',
+      title: 'List Claims',
       state: 'articles.list'
     });
 
     // Add the dropdown create item
     Menus.addSubMenuItem('topbar', 'articles', {
-      title: 'Create Article',
+      title: 'Create Claim',
       state: 'articles.create',
       roles: ['user']
     });
