@@ -8,7 +8,7 @@
     </button>
     <a ui-sref="home" class="navbar-brand">BestHood</a>
   </div>
-  <nav class="collapse navbar-collapse" uib-collapse="!isCollapsed" role="navigation">
+  <nav class="collapse navbar-collapse " uib-collapse="!isCollapsed" role="navigation">
     <ul class="nav navbar-nav" ng-if="menu.shouldRender(authentication.user);">
       <li ng-repeat="item in menu.items | orderBy: 'position'" ng-if="item.shouldRender(authentication.user);" ng-switch="item.type" ng-class="{ active: $state.includes(item.state), dropdown: item.type === 'dropdown' }" class="{{item.class}}" uib-dropdown="item.type === 'dropdown'">
         <a ng-switch-when="dropdown" class="dropdown-toggle" uib-dropdown-toggle role="button">{{::item.title}}&nbsp;<span class="caret"></span></a>
@@ -48,3 +48,20 @@
     </ul>
   </nav>
 </div>
+<ul class="nav navbar-nav navbar-right" ng-show="authentication.user">
+  <li class="dropdown" uib-dropdown>
+    <a class="dropdown-toggle user-header-dropdown-toggle" uib-dropdown-toggle role="button">
+      <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
+      <span ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+      <li ui-sref-active="active" ng-repeat="item in accountMenu.items">
+        <a ui-sref="{{item.state}}" ng-bind="item.title"></a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="/api/auth/signout" target="_self">Signout</a>
+      </li>
+    </ul>
+  </li>
+</ul>
