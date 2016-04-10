@@ -11,7 +11,7 @@
         <span data-ng-bind="donate.created | date:'mediumDate'"></span>
         by
         <span data-ng-if="donate.user" data-ng-bind="donate.user.displayName"></span>
-        <span data-ng-if="!donate.user">Deleted</span>
+        <span data-ng-if="!donate.user">Deleted User</span>
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="donate.name"></h4>
     </a>
