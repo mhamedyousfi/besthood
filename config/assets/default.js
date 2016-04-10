@@ -21,7 +21,8 @@ module.exports = {
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
     css: [
-      'modules/*/client/css/*.css'
+      'modules/*/client/css/*.css',
+      'modules/*/client/assets/css/*.css'
     ],
     less: [
       'modules/*/client/less/*.less'
@@ -33,9 +34,14 @@ module.exports = {
       'modules/core/client/app/config.js',
       'modules/core/client/app/init.js',
       'modules/*/client/*.js',
-      'modules/*/client/**/*.js'
+      'modules/*/client/**/*.js',
+      'modules/*/client/assets/js/*.js',
+      'modules/*/client/assets/js/**/*.js'
+
+
     ],
     img: [
+      'modules/**/*/img/*.jpg',
       'modules/**/*/img/**/*.jpg',
       'modules/**/*/img/**/*.png',
       'modules/**/*/img/**/*.gif',

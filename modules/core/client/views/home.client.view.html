@@ -1,84 +1,249 @@
 <section ng-controller="HomeController">
-  <div class="jumbotron text-center">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-        <img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/client/img/brand/logo.png" />
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <p class="lead">
-        Open-Source Full-Stack Solution For MEAN Applications
-      </p>
-    </div>
-    <div class="row">
-      <p>
-        <a class="btn btn-primary btn-lg" href="http://meanjs.org" target="_blank">Learn more</a>
-      </p>
-    </div>
-  </div>
-  <div>
-    <h2>Congrats! You've configured and run the sample application.</h2>
-    <p>MEAN.JS is a web application boilerplate, which means you should start changing everything :-)</p>
-    <p>This sample application tracks users and claims.</p>
-    <ul>
-      <li>
-        Click
-        <em>Sign Up</em> to get started.
-      </li>
-      <li>
-        Configure your app to work with your social accounts, by editing the
-        <em>/config/env/*.js</em> files.
-      </li>
-      <li>
-        Edit your users module.
-      </li>
-      <li>
-        Add new CRUD modules.
-      </li>
-      <li>
-        Have fun...
-      </li>
-    </ul>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <h2><strong>M</strong>ongoDB</h2>
-      <p><a target="_blank" href="http://mongodb.org/">MongoDB</a> is a NoSQL database. MongoDB's <a target="_blank" href="http://docs.mongodb.org/manual/">great manual</a> is the place to get started with NoSQL and MongoDB.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>E</strong>xpress</h2>
-      <p><a target="_blank" href="http://expressjs.com/"> Express</a> is a NodeJS server-side application web framework. Check out <a target="_blank" href="http://expressjs.com/4x/api.html">The ExpressJS API reference for more information</a> or <a target="_blank" href="http://stackoverflow.com/questions/8144214/learning-express-for-node-js">StackOverflow</a> for more info.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>A</strong>ngularJS</h2>
-      <p><a target="_blank" href="http://angularjs.org/">AngularJS</a> is client-side web application framework. The <a target="_blank" href="http://www.thinkster.io/">Thinkster Popular Guide</a> and <a target="_blank" href="https://egghead.io/">Egghead Videos</a> are great resources.</p>
-    </div>
-    <div class="col-md-3">
-      <h2><strong>N</strong>ode.js</h2>
-      <p><a target="_blank" href="http://nodejs.org/">Node.js</a> is a JavaScript run-time, popular for being a web server platform. Node's website and this <a target="_blank" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">stackOverflow thread</a> offer excellent starting points to get to grasps with node.</p>
-    </div>
-  </div>
-  <div class="well">
-    <h2>MEAN.JS Documentation</h2>
-    <p>
-      Once you're familiar with the foundation technology, check out the MEAN.JS Documentation:
-      <ul>
-        <li><a target="_blank" href="http://meanjs.org/docs.html">MEAN.JS Documentation</a>
-        </li>
-        <!-- <li><a target="_blank" href="http://meanjs.org/generator.html">Yeoman Generator</a>
-				</li> -->
-        <li><a target="_blank" href="http://meanjs.org/modules.html">Modules</a>
-        </li>
-        <li><a target="_blank" href="http://meanjs.org/changelog.html">Changelog</a>
-        </li>
-        <li><a target="_blank" href="http://meanjs.org/community.html">Community</a>
-        </li>
-        <li><a target="_blank" href="http://blog.meanjs.org">Blog</a>
-        </li>
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Post -->
+      <article class="post">
+        <header>
+          <div class="title">
+            <h2><a href="#">Magna sed adipiscing</a></h2>
+
+            <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+          </div>
+          <div class="meta">
+            <time class="published" datetime="2015-11-01">November 1, 2015</time>
+            <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt=""/></a>
+          </div>
+        </header>
+        <a href="#" class="image featured"><img src="img/pic01.jpg" alt=""/></a>
+
+        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+          placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue
+          ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+          ultricies congue gravida diam non fringilla.</p>
+        <footer>
+          <ul class="actions">
+            <li><a href="#" class="button big">Continue Reading</a></li>
+          </ul>
+          <ul class="stats">
+            <li><a href="#">General</a></li>
+            <li><a href="#" class="icon fa-heart">28</a></li>
+            <li><a href="#" class="icon fa-comment">128</a></li>
+          </ul>
+        </footer>
+      </article>
+
+      <!-- Post -->
+      <article class="post">
+        <header>
+          <div class="title">
+            <h2><a href="#">Ultricies sed magna euismod enim vitae gravida</a></h2>
+
+            <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+          </div>
+          <div class="meta">
+            <time class="published" datetime="2015-10-25">October 25, 2015</time>
+            <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt=""/></a>
+          </div>
+        </header>
+        <a href="#" class="image featured"><img src="img/pic02.jpg" alt=""/></a>
+
+        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+          placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue
+          ullam corper.</p>
+        <footer>
+          <ul class="actions">
+            <li><a href="#" class="button big">Continue Reading</a></li>
+          </ul>
+          <ul class="stats">
+            <li><a href="#">General</a></li>
+            <li><a href="#" class="icon fa-heart">28</a></li>
+            <li><a href="#" class="icon fa-comment">128</a></li>
+          </ul>
+        </footer>
+      </article>
+
+      <!-- Post -->
+      <article class="post">
+        <header>
+          <div class="title">
+            <h2><a href="#">Euismod et accumsan</a></h2>
+
+            <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+          </div>
+          <div class="meta">
+            <time class="published" datetime="2015-10-22">October 22, 2015</time>
+            <a href="#" class="author"><span class="name">Jane Doe</span><img src="img/avatar.jpg" alt=""/></a>
+          </div>
+        </header>
+        <a href="#" class="image featured"><img src="img/pic03.jpg" alt=""/></a>
+
+        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+          placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue
+          ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae,
+          ultricies congue gravida diam non fringilla. Cras vehicula tellus eu ligula viverra, ac fringilla turpis
+          suscipit. Quisque vestibulum rhoncus ligula.</p>
+        <footer>
+          <ul class="actions">
+            <li><a href="#" class="button big">Continue Reading</a></li>
+          </ul>
+          <ul class="stats">
+            <li><a href="#">General</a></li>
+            <li><a href="#" class="icon fa-heart">28</a></li>
+            <li><a href="#" class="icon fa-comment">128</a></li>
+          </ul>
+        </footer>
+      </article>
+
+
+                  <!-- Pagination -->
+      <ul class="actions pagination">
+        <li><a href="" class="disabled button big previous">Previous Page</a></li>
+        <li><a href="#" class="button big next">Next Page</a></li>
       </ul>
-    </p>
+
+    </div>
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+
+      <!-- Intro -->
+      <section id="intro">
+        <a href="#" class="logo"><img src="img/logo.jpg" alt=""/></a>
+        <header>
+          <h2>Future Imperfect</h2>
+
+          <p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+        </header>
+      </section>
+
+      <!-- Mini Posts -->
+      <section>
+        <div class="mini-posts">
+
+          <!-- Mini Post -->
+          <article class="mini-post">
+            <header>
+              <h3><a href="#">Vitae sed condimentum</a></h3>
+              <time class="published" datetime="2015-10-20">October 20, 2015</time>
+              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
+            </header>
+            <a href="#" class="image"><img src="img/pic04.jpg" alt=""/></a>
+          </article>
+
+          <!-- Mini Post -->
+          <article class="mini-post">
+            <header>
+              <h3><a href="#">Rutrum neque accumsan</a></h3>
+              <time class="published" datetime="2015-10-19">October 19, 2015</time>
+              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
+            </header>
+            <a href="#" class="image"><img src="img/pic05.jpg" alt=""/></a>
+          </article>
+
+          <!-- Mini Post -->
+          <article class="mini-post">
+            <header>
+              <h3><a href="#">Odio congue mattis</a></h3>
+              <time class="published" datetime="2015-10-18">October 18, 2015</time>
+              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
+            </header>
+            <a href="#" class="image"><img src="img/pic06.jpg" alt=""/></a>
+          </article>
+
+          <!-- Mini Post -->
+          <article class="mini-post">
+            <header>
+              <h3><a href="#">Enim nisl veroeros</a></h3>
+              <time class="published" datetime="2015-10-17">October 17, 2015</time>
+              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
+            </header>
+            <a href="#" class="image"><img src="img/pic07.jpg" alt=""/></a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Posts List -->
+      <section>
+        <ul class="posts">
+          <li>
+            <article>
+              <header>
+                <h3><a href="#">Lorem ipsum fermentum ut nisl vitae</a></h3>
+                <time class="published" datetime="2015-10-20">October 20, 2015</time>
+              </header>
+              <a href="#" class="image"><img src="img/pic08.jpg" alt=""/></a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <h3><a href="#">Convallis maximus nisl mattis nunc id lorem</a></h3>
+                <time class="published" datetime="2015-10-15">October 15, 2015</time>
+              </header>
+              <a href="#" class="image"><img src="img/pic09.jpg" alt=""/></a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <h3><a href="#">Euismod amet placerat vivamus porttitor</a></h3>
+                <time class="published" datetime="2015-10-10">October 10, 2015</time>
+              </header>
+              <a href="#" class="image"><img src="img/pic10.jpg" alt=""/></a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <h3><a href="#">Magna enim accumsan tortor cursus ultricies</a></h3>
+                <time class="published" datetime="2015-10-08">October 8, 2015</time>
+              </header>
+              <a href="#" class="image"><img src="img/pic11.jpg" alt=""/></a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <h3><a href="#">Congue ullam corper lorem ipsum dolor</a></h3>
+                <time class="published" datetime="2015-10-06">October 7, 2015</time>
+              </header>
+              <a href="#" class="image"><img src="img/pic12.jpg" alt=""/></a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- About -->
+      <section class="blurb">
+        <h2>About</h2>
+
+        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod amet
+          placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at phasellus sed ultricies.</p>
+        <ul class="actions">
+          <li><a href="#" class="button">Learn More</a></li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <ul class="icons">
+          <li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+          <li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a
+          href="http://unsplash.com">Unsplash</a>.</p>
+      </section>
+
+    </section>
+
   </div>
-  <br>Enjoy &amp; Keep Us Updated,
-  <br>The MEAN.JS Team.
 </section>
