@@ -6,10 +6,12 @@
     <a data-ng-repeat="claim in vm.claims"
        data-ui-sref="claims.view({ claimId: claim._id })"
        class="list-group-item">
+      <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
       <small class="list-group-item-text">
         Posted on
         <span data-ng-bind="claim.created | date:'mediumDate'"></span>
         by
+
         <span data-ng-if="claim.user" data-ng-bind="claim.user.displayName"></span>
         <span data-ng-if="!claim.user">Deleted User</span>
       </small>

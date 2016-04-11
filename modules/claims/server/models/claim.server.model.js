@@ -16,6 +16,12 @@ var ClaimSchema = new Schema({
     required: 'Please fill Claim name',
     trim: true
   },
+  content: {
+    type: String,
+    default: '',
+    required: 'Please fill Claim content',
+    trim: true
+  },
   created: {
     type: Date,
     default: Date.now
