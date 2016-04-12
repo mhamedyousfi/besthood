@@ -22,6 +22,18 @@ var ClaimSchema = new Schema({
     required: 'Please fill Claim content',
     trim: true
   },
+  /////
+  lat:{
+    type: Number,
+    default: 0,
+    trim: true
+  },
+  lon:{
+    type: Number,
+    default: 0,
+    trim: true
+  },
+  ///////
   created: {
     type: Date,
     default: Date.now
