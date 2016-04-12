@@ -1,13 +1,17 @@
 <section>
   <div class="page-header">
     <h1>Claims</h1>
-
+    <map center="[37,10]" zoom="8">
+      <marker data-ng-repeat="claim in vm.claims" title='{{claim.user.displayName}}' position='[{{claim.lat}},{{claim.lon}}]' visible="true" on-click="gotolink(event,claim)">
+      </marker>
+    </map>
   </div>
   <div class="list-group">
     <a data-ng-repeat="claim in vm.claims"
        data-ui-sref="claims.view({ claimId: claim._id })"
        class="list-group-item">
-      <img ng-src="{{vm.authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
+
+      <img ng-src="{{vm.claim.user.profileImageURL}}" alt="{{claim.user.displayName}}" class="header-profile-image" />
       <small class="list-group-item-text">
         Posted on
         <span data-ng-bind="claim.created | date:'mediumDate'"></span>
