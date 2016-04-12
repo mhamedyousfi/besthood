@@ -18,6 +18,19 @@
     vm.remove = remove;
     vm.save = save;
 
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position){
+        $scope.$apply(function(){
+
+          vm.claim.lat = position.coords.latitude;
+          $scope.lat = position.coords.latitude;
+          vm.claim.lon = position.coords.longitude;
+          $scope.claim.lon = position.coords.longitude;
+
+
+        });
+      });
+    }
     // Remove existing Claim
     function remove() {
       if (confirm('Are you sure you want to delete?')) {
