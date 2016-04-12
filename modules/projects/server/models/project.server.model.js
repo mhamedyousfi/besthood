@@ -22,6 +22,10 @@ var ProjectSchema = new Schema({
     required: 'Please fill Claim content',
     trim: true
   },
+  profileImageURL: {
+    type: String,
+    default: 'modules/projects/client/img/profile/default.png'
+  },
   /////
   lat:{
     type: Number,
