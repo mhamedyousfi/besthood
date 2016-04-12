@@ -17,10 +17,7 @@
         <span data-ng-if="!claim.user">Deleted User</span>
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="claim.name"></h4>
-      <map center="[0,0]" zoom="1">
-        <marker  animation = "Animation.BOUNCE" position='[{{claim.lat}},{{claim.lon}}]' visible="true" on-click="gotolink(event,claim)" title="{{claim.user.displayName}}">
-        </marker>
-      </map>
+
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.claims.$resolved && !vm.claims.length">

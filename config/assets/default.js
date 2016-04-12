@@ -17,10 +17,10 @@ module.exports = {
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
         'public/lib/angular-file-upload/angular-file-upload.js',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
-        'public/lib/angular-ui-utils/ui-utils.js',
-        'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-        'http://maps.google.com/maps/api/js', // I'm using a CDN
-        'public/lib/ngmap/build/scripts/ng-map.min.js'
+        'public/lib/angular-ui-event/dist/event.min.js',
+        'public/lib/angular-ui-map/src/map.js',
+        'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady',
+        'https://apis.google.com/js/platform.js',
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
