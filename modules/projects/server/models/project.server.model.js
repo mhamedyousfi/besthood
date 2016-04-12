@@ -19,9 +19,21 @@ var ProjectSchema = new Schema({
   content: {
     type: String,
     default: '',
-    required: 'Please fill Project content',
+    required: 'Please fill Claim content',
     trim: true
   },
+  /////
+  lat:{
+    type: Number,
+    default: 0,
+    trim: true
+  },
+  lon:{
+    type: Number,
+    default: 0,
+    trim: true
+  },
+  ///////
   created: {
     type: Date,
     default: Date.now

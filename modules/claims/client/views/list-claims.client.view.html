@@ -7,7 +7,7 @@
     <a data-ng-repeat="claim in vm.claims"
        data-ui-sref="claims.view({ claimId: claim._id })"
        class="list-group-item">
-      <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
+      <img ng-src="{{vm.authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
       <small class="list-group-item-text">
         Posted on
         <span data-ng-bind="claim.created | date:'mediumDate'"></span>

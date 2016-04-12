@@ -2,6 +2,10 @@
   <div class="page-header">
     <h1 data-ng-bind="vm.project.name"></h1>
   </div>
+  <map center="[0,0]" zoom="1">
+    <marker  animation = "Animation.BOUNCE" position='[{{project.lat}},{{project.lon}}]' visible="true" on-click="gotolink(event,project)" title="{{project.user.displayName}}">
+    </marker>
+  </map>
   <div class="pull-right"
        data-ng-show="vm.project.isCurrentUserOwner">
     <a class="btn btn-primary"
@@ -12,8 +16,7 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <p class="lead" data-ng-bind="vm.project.content"></p>
-
+  <img ng-src="{{aut.user.profileImageURL}}" class="header-profile-image" />
   <small>
     <em class="text-muted">
       Posted on
@@ -24,4 +27,5 @@
       <span data-ng-if="!vm.project.user">Deleted User</span>
     </em>
   </small>
+  <p class="lead" data-ng-bind="vm.project.content"></p>
 </section>
