@@ -9,7 +9,6 @@
 
   function ProjectsListController(ProjectsService) {
     var vm = this;
-
     vm.projects = ProjectsService.query();
   }
 })();
