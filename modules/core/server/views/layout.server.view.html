@@ -76,16 +76,14 @@
     function drawChart() {
 
       var data = google.visualization.arrayToDataTable([
-        ['User', 'Hours per Day'],
-        ['Work',     11],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
+        ['User', 'Claim Project'],
+        ['Users',     11],
+        ['Claims',      6],
+        ['Projects',  2]
       ]);
 
       var options = {
-        title: 'My Daily Activities'
+        title: 'Users Project Claims'
       };
 
       var chart = new google.visualization.PieChart(document.getElementById('piechart'));

@@ -55,7 +55,7 @@
     // Create file uploader instance
     $scope.uploader = new FileUploader({
       url: 'api/projects/picture',
-      alias: 'newProfilePicture'
+      alias: 'newProjectPicture'
     });
 
     // Set file uploader image filter
