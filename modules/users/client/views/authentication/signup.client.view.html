@@ -41,7 +41,15 @@
               <p class="help-block error-text" ng-show="userForm.password.$error.requirements">{{passwordError}}</p>
             </div>
           </div>
-        </div>
+          </div>
+          <div class="form-group" show-errors>
+          <label for="community">Community</label>
+            <select  ng-model="credentials.community" id="community" name="community" class="form-control" required>
+              <option data-ng-repeat="c in communities" value="{{c.name}}" class="list-group-item">
+                {{c.name}}
+              </option>
+            </select>
+          </div>
         <div class="form-group" ng-show="!userForm.password.$error.required">
           <label>Password Requirements</label>
           <uib-progressbar value="requirementsProgress" type="{{requirementsColor}}"><span style="color:white; white-space:nowrap;">{{requirementsProgress}}%</span></uib-progressbar>

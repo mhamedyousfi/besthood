@@ -87,6 +87,9 @@ var UserSchema = new Schema({
   updated: {
     type: Date
   },
+  community: {
+    type: String
+  },
   created: {
     type: Date,
     default: Date.now
@@ -97,11 +100,8 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
-  },
-  community: {
-    type: Schema.ObjectId,
-    ref: 'Community'
   }
+
 });
 
 /**

@@ -31,6 +31,14 @@
             <p class="help-block error-text" ng-message="required">Username is required.</p>
           </div>
         </div>
+        <div class="form-group" show-errors>
+          <label for="community">Community :{{com}}</label>
+          <select  ng-model="user.community" id="community" name="community" class="form-control" required>
+            <option data-ng-repeat="c in communities" value="{{c.name}}" class="list-group-item">
+              {{c.name}}
+            </option>
+          </select>
+        </div>
         <div class="text-center form-group">
           <button type="submit" class="btn btn-primary">Save Profile</button>
         </div>
