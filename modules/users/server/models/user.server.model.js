@@ -97,6 +97,10 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
+  },
+  community: {
+    type: Schema.ObjectId,
+    ref: 'Community'
   }
 });
 
