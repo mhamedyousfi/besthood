@@ -41,7 +41,9 @@ describe('Claim CRUD tests', function () {
       email: 'test@test.com',
       username: credentials.username,
       password: credentials.password,
-      provider: 'local'
+      provider: 'local',
+      community: credentials.community
+
     });
 
     // Save a user to the test db and create new Claim

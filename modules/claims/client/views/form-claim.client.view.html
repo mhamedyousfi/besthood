@@ -3,14 +3,10 @@
     <h1>{{vm.claim._id ? 'Edit Claim' : 'New Claim'}}</h1>
   </div>
   <div class="col-md-12">
-    <ng-map class="map" zoom="15" center="[{{lat}}, {{lon}}]">
-      <marker draggable="true" animation="Animation.BOUNCE" position="[{{lat}}, {{lon}}]" />
-      <shape
-             name="circle"
-             radius="500"
-             center="[{{lat}}, {{lon}}]"
-      />
-      <control name="overviewMap" opened="true" />
+    <ng-map class="map" zoom="15" center="[{{vm.claim.lat}},{{vm.claim.lon}}]">
+      <marker draggable="true" animation="Animation.BOUNCE" position="[{{vm.claim.lat}},{{vm.claim.lon}}]" />
+      <shape name="circle" radius="500" center="[{{vm.claim.lat}}, {{vm.claim.lon}}]" />
+      <control name="overviewMap" opened="false" />
     </ng-map>
     <form name="vm.form.claimForm" class="form-horizontal" ng-submit="vm.save(vm.form.claimForm.$valid)" novalidate>
       <fieldset>
@@ -29,18 +25,18 @@
           </div>
         </div>
 
-        <div class="form-group" show-errors>
+        <div class="form-group" show-errors >
           <label class="control-label" for="lat">Latitude</label>
-          <input value="{{lat}}" name="lat" type="text" data-ng-model="vm.claim.lat" id="lat" class="form-control" placeholder="Latitude" required>
+          <input  name="lat" type="text" data-ng-model="vm.claim.lat" id="lat" class="form-control" placeholder="Latitude" required>
           <div ng-messages="vm.form.claimForm.lat.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Claim name is required.</p>
+            <p class="help-block error-text" ng-message="required">Claim Latitude is required.</p>
           </div>
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="lon">Longitude</label>
-          <input value="{{lon}}" name="lon" type="text" data-ng-model="vm.claim.lon" id="lon" class="form-control" placeholder="Longitude" required>
+          <input name="lon" type="text" data-ng-model="vm.claim.lon" id="lon" class="form-control" placeholder="Longitude" required>
           <div ng-messages="vm.form.claimForm.lon.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Claim name is required.</p>
+            <p class="help-block error-text" ng-message="required">Claim Longitude is required.</p>
           </div>
         </div>
         <div class="form-group">

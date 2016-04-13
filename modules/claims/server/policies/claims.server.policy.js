@@ -49,7 +49,7 @@ exports.isAllowed = function (req, res, next) {
   var roles = (req.user) ? req.user.roles : ['guest'];
 
   // If an Claim is being processed and the current user created it then allow any manipulation
-  if (req.claim && req.user && req.claim.user && req.claim.user.id === req.user.id) {
+  if (req.claim && req.user && req.claim.user && req.claim.user.id === req.user.id &&  req.claim.user.community === req.user.community) {
     return next();
   }
 

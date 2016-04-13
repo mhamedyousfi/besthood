@@ -22,10 +22,8 @@
       navigator.geolocation.getCurrentPosition(function(position){
         $scope.$apply(function(){
 
-
-
-          $scope.lat = position.coords.latitude;
-          $scope.lon = position.coords.longitude;
+          vm.claim.lat = position.coords.latitude;
+          vm.claim.lon = position.coords.longitude;
 
         });
       });
