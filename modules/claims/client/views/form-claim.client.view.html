@@ -3,9 +3,15 @@
     <h1>{{vm.claim._id ? 'Edit Claim' : 'New Claim'}}</h1>
   </div>
   <div class="col-md-12">
-    <map center="[{{lat}},{{lon}}]" zoom ='5'>
-      <marker position="[{{lat}},{{lon}}]" visible="true"></marker>
-    </map>
+    <ng-map class="map" zoom="15" center="[{{lat}}, {{lon}}]">
+      <marker position="[{{lat}}, {{lon}}]" />
+      <shape
+             name="circle"
+             radius="500"
+             center="[{{lat}}, {{lon}}]"
+      />
+      <control name="overviewMap" opened="true" />
+    </ng-map>
     <form name="vm.form.claimForm" class="form-horizontal" ng-submit="vm.save(vm.form.claimForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>

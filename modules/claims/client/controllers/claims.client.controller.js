@@ -22,10 +22,12 @@
       navigator.geolocation.getCurrentPosition(function(position){
         $scope.$apply(function(){
 
-          vm.lat = position.coords.latitude;
+
+          vm.claim.lat = position.coords.latitude;
           $scope.lat = position.coords.latitude;
           vm.claim.lon = position.coords.longitude;
           $scope.lon = position.coords.longitude;
+
         });
       });
     }

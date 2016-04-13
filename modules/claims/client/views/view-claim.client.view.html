@@ -12,7 +12,7 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <map center="[37,10]" zoom="8">
+  <map center="[{{vm.claim.lat}},{{vm.claim.lon}}]" zoom="8">
     <marker position="[{{vm.claim.lat}},{{vm.claim.lon}}]" title="{{vm.claim.user.displayName}}" visible="true"></marker>
   </map>
   <img ng-src="{{vm.claim.user.profileImageURL}}" class="header-profile-image" />
