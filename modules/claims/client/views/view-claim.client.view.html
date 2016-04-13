@@ -14,6 +14,14 @@
   </div>
   <ng-map center="[{{vm.claim.lat}},{{vm.claim.lon}}]" zoom="15">
     <marker position="[{{vm.claim.lat}},{{vm.claim.lon}}]" title="{{vm.claim.user.displayName}}" visible="true"></marker>
+    <shape
+      name="circle"
+      radius="500"
+      center="[{{vm.claim.lat}}, {{vm.claim.lon}}]"
+      stroke-opacity="1"
+      fill-color="red"
+    />
+    <control name="overviewMap" opened="true" />
   </ng-map>
   <img ng-src="{{vm.claim.user.profileImageURL}}" class="header-profile-image" />
   <small>
