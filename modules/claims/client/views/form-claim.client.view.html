@@ -3,8 +3,8 @@
     <h1>{{vm.claim._id ? 'Edit Claim' : 'New Claim'}}</h1>
   </div>
   <div class="col-md-12">
-    <ng-map class="map" zoom="15" center="[{{vm.claim.lat}},{{vm.claim.lon}}]">
-      <marker draggable="true" animation="Animation.BOUNCE" position="[{{vm.claim.lat}},{{vm.claim.lon}}]" />
+    <ng-map class="map" zoom="15" center="[{{vm.claim.lat}}, {{vm.claim.lon}}]">
+      <marker draggable="true" animation="Animation.BOUNCE" position="[{{vm.claim.lat}}, {{vm.claim.lon}}]" />
       <shape name="circle" radius="500" center="[{{vm.claim.lat}}, {{vm.claim.lon}}]" />
       <control name="overviewMap" opened="false" />
     </ng-map>

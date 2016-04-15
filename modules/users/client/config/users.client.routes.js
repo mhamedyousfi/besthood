@@ -41,13 +41,6 @@ angular.module('users').config(['$stateProvider',
           pageTitle: 'Settings picture'
         }
       })
-        .state('settings.stat', {
-        url: '/stat',
-        templateUrl: 'modules/users/client/views/settings/stat.client.view.html',
-        data: {
-          pageTitle: 'Settings Statistique'
-        }
-      })
       .state('authentication', {
         abstract: true,
         url: '/authentication',
