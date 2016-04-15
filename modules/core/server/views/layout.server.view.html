@@ -68,29 +68,7 @@
   <!--Livereload script rendered -->
   <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
   {% endif %}
-  <!-- END CORE TEMPLATE JS - END -->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
 
-      var data = google.visualization.arrayToDataTable([
-        ['User', 'Claim Project'],
-        ['Users',     11],
-        ['Claims',      6],
-        ['Projects',  2]
-      ]);
-
-      var options = {
-        title: 'Users Project Claims'
-      };
-
-      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-      chart.draw(data, options);
-    }
-  </script>
 </body>
 
 </html>

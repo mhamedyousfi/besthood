@@ -85,8 +85,7 @@ describe('Community CRUD tests', function () {
                   return done(communitysGetErr);
                 }
 
-                // Get Communities list
-                var communities = communitiesGetRes.body;
+
 
                 // Set assertions
                 (communities[0].user._id).should.equal(userId);

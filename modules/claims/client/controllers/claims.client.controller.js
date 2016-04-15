@@ -13,7 +13,6 @@
 
     vm.authentication = Authentication;
     vm.claim = claim;
-    $scope.img = $scope.claim.user.profileImageURL;
     vm.error = null;
     vm.form = {};
     vm.remove = remove;
