@@ -19,10 +19,10 @@ var getCred = function (serviceName, credProp) {
 module.exports = {
   port: appEnv.port,
   db: {
-    uri: cfMongoUrl,
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds011379.mlab.com:11379') + '/besthood',
     options: {
-      user: '',
-      pass: ''
+      user: 'ebdelli',
+      pass: 'khlech8940'
     }
   },
   log: {
@@ -33,18 +33,18 @@ module.exports = {
     options: {}
   },
   facebook: {
-    clientID: getCred('mean-facebook', 'id') || 'APP_ID',
-    clientSecret: getCred('mean-facebook', 'secret') || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '1528566004105179',
+    clientSecret: process.env.FACEBOOK_SECRET || 'd1536a62112239867aa32fe1289aadac',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
-    clientID: getCred('mean-twitter', 'key') || 'CONSUMER_KEY',
-    clientSecret: getCred('mean-twitter', 'secret') || 'CONSUMER_SECRET',
+    clientID: process.env.TWITTER_KEY || 'UUc5M4Xke6ZxnVe7aVY0P0HMC',
+    clientSecret: process.env.TWITTER_SECRET || 'TDJUU4Og44f3x16MTsstnt43FwI8E1QBKH9UknTdxWdQBNpTeN',
     callbackURL: '/api/auth/twitter/callback'
   },
   google: {
-    clientID: getCred('mean-google', 'id') || 'APP_ID',
-    clientSecret: getCred('mean-google', 'secret') || 'APP_SECRET',
+    clientID: process.env.GOOGLE_ID || '477380247059-pbot3vt5154qgs4de1621cpub797ulaj.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'HO-MqF3zbiMfcM1Pq2_1oa3q',
     callbackURL: '/api/auth/google/callback'
   },
   linkedin: {
