@@ -23,7 +23,9 @@
 	}
 
 	body {
+		-webkit-text-size-adjust: true;
 		line-height: 1;
+		width: auto;
 	}
 
 	ol, ul {
@@ -44,9 +46,7 @@
 		border-spacing: 0;
 	}
 
-	body {
-		-webkit-text-size-adjust: none;
-	}
+
 
 /* Box Model */
 
