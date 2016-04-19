@@ -98,46 +98,21 @@
       <!-- Mini Posts -->
       <section>
         <div class="mini-posts">
-
-          <!-- Mini Post -->
-          <article class="mini-post">
-            <header>
-              <h3><a href="#">Vitae sed condimentum</a></h3>
-              <time class="published" datetime="2015-10-20">October 20, 2015</time>
-              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
-            </header>
-            <a href="#" class="image"><img src="img/pic04.jpg" alt=""/></a>
-          </article>
-
-          <!-- Mini Post -->
-          <article class="mini-post">
-            <header>
-              <h3><a href="#">Rutrum neque accumsan</a></h3>
-              <time class="published" datetime="2015-10-19">October 19, 2015</time>
-              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
-            </header>
-            <a href="#" class="image"><img src="img/pic05.jpg" alt=""/></a>
-          </article>
-
-          <!-- Mini Post -->
-          <article class="mini-post">
-            <header>
-              <h3><a href="#">Odio congue mattis</a></h3>
-              <time class="published" datetime="2015-10-18">October 18, 2015</time>
-              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
-            </header>
-            <a href="#" class="image"><img src="img/pic06.jpg" alt=""/></a>
-          </article>
-
-          <!-- Mini Post -->
-          <article class="mini-post">
-            <header>
-              <h3><a href="#">Enim nisl veroeros</a></h3>
-              <time class="published" datetime="2015-10-17">October 17, 2015</time>
-              <a href="#" class="author"><img src="img/avatar.jpg" alt=""/></a>
-            </header>
-            <a href="#" class="image"><img src="img/pic07.jpg" alt=""/></a>
-          </article>
+          <form>
+            <input type="text" ng-model="l">
+            <input type="submit" value="Search" ng-click="findWeather(l)">
+          </form>
+          <p ng-show="l">Searching the forecasts for: {{l}}</p>
+          <div>
+            <h1>Forecast For: {{ place.location.city }}</h1>
+            <h1>Latitude: {{ place.item.lat }}</h1>
+            <h1>Longitude For: {{ place.item.long }}</h1>
+            <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+            <div ng-repeat="forecast in place.item.forecast">
+              <p><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</p>
+              <p>H: {{ forecast.high }}&deg; | L: {{ forecast.low }}&deg;</p>
+            </div>
+          </div>
 
         </div>
       </section>
