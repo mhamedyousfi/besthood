@@ -33,6 +33,12 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
           pageTitle: 'Bad-Request'
         }
       })
+        .state('contact',{
+          url: '/contact',
+          templateUrl: 'modules/core/client/views/contact.client.view.html'
+        })
+
+
       .state('forbidden', {
         url: '/forbidden',
         templateUrl: 'modules/core/client/views/403.client.view.html',

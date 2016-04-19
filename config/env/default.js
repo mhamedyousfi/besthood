@@ -4,7 +4,7 @@ module.exports = {
   app: {
     title: 'BestHood',
     description: 'BestHood : mean stack application ',
-    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
+    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport,nodemailer',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
   port: process.env.PORT || 3000,
