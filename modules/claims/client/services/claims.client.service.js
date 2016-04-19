@@ -3,8 +3,7 @@
   'use strict';
 
   angular
-    .module('claims')
-    .factory('ClaimsService', ClaimsService);
+    .module('claims').factory('ClaimsService', ClaimsService);
 
   ClaimsService.$inject = ['$resource'];
 
