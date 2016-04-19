@@ -1,23 +1,10 @@
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$state', '$http', '$location', '$window', 'Authentication','PasswordValidator','CommunitiesService','weatherService',
-  function ($scope, $state, $http, $location, $window, Authentication, PasswordValidator,CommunitiesService,weatherService) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$state', '$http', '$location', '$window', 'Authentication','PasswordValidator','CommunitiesService',
+  function ($scope, $state, $http, $location, $window, Authentication, PasswordValidator,CommunitiesService) {
     $scope.authentication = Authentication;
     $scope.popoverMsg = PasswordValidator.getPopoverMsg();
     $scope.communities = CommunitiesService.query();
-    function fetchWeather(p) {
-      weatherService.getWeather(p).then(function(data){
-        $scope.place = data;
-
-      });
-    }
-
-
-    fetchWeather('84105');
-    $scope.findWeather = function(zip) {
-      $scope.place = '';
-      fetchWeather(zip);
-    };
     // Get an eventual error defined in the URL query string:
     $scope.error = $location.search().err;
 

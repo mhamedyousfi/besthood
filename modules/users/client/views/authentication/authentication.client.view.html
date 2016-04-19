@@ -8,21 +8,6 @@
     <img ng-click="callOauthProvider('/api/auth/github')" ng-src="/modules/users/client/img/buttons/github.png">
     <img ng-click="callOauthProvider('/api/auth/paypal')"  ng-src="/modules/users/client/img/buttons/paypal.png">
 
-    <form>
-      <input type="text" ng-model="p">
-      <input type="submit" value="Search" ng-click="findWeather(p)">
-    </form>
-    <p ng-show="zip">Searching the forecasts for: {{zip}}</p>
-    <div>
-      <h1>Forecast For: {{ place.location.city }}</h1>
-      <h1>Latitude: {{ place.item.lat }}</h1>
-      <h1>Longitude For: {{ place.item.long }}</h1>
-      <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
-      <div ng-repeat="forecast in place.item.forecast">
-        <p><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</p>
-        <p>H: {{ forecast.high }}&deg; | L: {{ forecast.low }}&deg;</p>
-      </div>
-    </div>
 
   </div>
   <div ui-view></div>
