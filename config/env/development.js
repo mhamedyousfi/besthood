@@ -4,10 +4,10 @@ var defaultEnvConfig = require('./default');
 
 module.exports = {
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds011379.mlab.com:11379') + '/besthood',
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds013981.mlab.com:13981') + '/besthood',
     options: {
-      user: 'ebdelli',
-      pass: 'khlech8940'
+      user: 'besthood',
+      pass: 'besthood'
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
@@ -68,7 +68,7 @@ module.exports = {
   mailer: {
     from: process.env.MAILER_FROM || 'oumaima.bouyahi@esprit.tn',
     options: {
-      service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
+      service: process.env.MAILER_SERVICE_PROVIDER || 'Gmail',
       auth: {
         user: process.env.MAILER_EMAIL_ID || '456350616848-5p747s0heqigmq23s50c7nmrmt32qicu.apps.googleusercontent.com',
         pass: process.env.MAILER_PASSWORD || 'NBDbgMhsaP8YXsJIBWaTa-wE'
