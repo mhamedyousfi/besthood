@@ -10,10 +10,10 @@ module.exports = {
   // Binding to 127.0.0.1 is safer in production.
   host: process.env.HOST || '0.0.0.0',
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds011379.mlab.com:11379') + '/besthood',
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'ds013981.mlab.com:13981') + '/besthood',
     options: {
-      user: 'ebdelli',
-      pass: 'khlech8940'
+      user: 'besthood',
+      pass: 'besthood'
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false

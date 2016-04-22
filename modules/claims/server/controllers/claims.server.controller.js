@@ -83,7 +83,7 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) {
 
   Claim.find()
-      .sort('-created').populate('user', 'displayName').exec(function(err, claims) {
+      .sort('-created').populate('user', 'displayName profileImageURL').exec(function(err, claims) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -106,7 +106,7 @@ exports.claimByID = function(req, res, next, id) {
     });
   }
 
-  Claim.findById(id).populate('user', 'displayName').exec(function (err, claim) {
+  Claim.findById(id).populate('user', 'displayName profileImageURL').exec(function (err, claim) {
     if (err) {
       return next(err);
     } else if (!claim) {

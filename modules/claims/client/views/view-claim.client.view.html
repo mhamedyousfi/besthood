@@ -1,4 +1,19 @@
 <section>
+  <div class="row">
+    <div class="col-lg-6">
+  <ng-map center="[{{vm.claim.lat}},{{vm.claim.lon}}]" zoom="18">
+    <marker position="[{{vm.claim.lat}},{{vm.claim.lon}}]" title="{{vm.claim.user.displayName}}" visible="true"></marker>
+    <shape
+      name="circle"
+      radius="50"
+      center="[{{vm.claim.lat}}, {{vm.claim.lon}}]"
+      stroke-opacity="1"
+      fill-color="red"
+    />
+    <control name="overviewMap" opened="true" />
+  </ng-map>
+      </div>
+    <div class="col-lg-6">
   <div class="page-header">
     <h1 data-ng-bind="vm.claim.name"></h1>
   </div>
@@ -12,19 +27,10 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <ng-map center="[{{vm.claim.lat}},{{vm.claim.lon}}]" zoom="15">
-    <marker position="[{{vm.claim.lat}},{{vm.claim.lon}}]" title="{{vm.claim.user.displayName}}" visible="true"></marker>
-    <shape
-      name="circle"
-      radius="500"
-      center="[{{vm.claim.lat}}, {{vm.claim.lon}}]"
-      stroke-opacity="1"
-      fill-color="red"
-    />
-    <control name="overviewMap" opened="true" />
-  </ng-map>
-  <img ng-src="{{vm.claim.user.profileImageURL}}" class="header-profile-image" />
+
+
   <small>
+    <img ng-src="{{vm.claim.user.profileImageURL}}" class="pull-left chat-profile-image" />
     <em class="text-muted">
       Posted On
       <span data-ng-bind="vm.claim.created | date:'mediumDate'"></span>
@@ -35,4 +41,6 @@
     </em>
   </small>
   <p class="lead" data-ng-bind="vm.claim.content"></p>
+</div>
+  </div>
 </section>

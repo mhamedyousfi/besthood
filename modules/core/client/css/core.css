@@ -1,5 +1,5 @@
 .content {
-  margin-top: 50px;
+  margin: 0 auto;
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -26,8 +26,8 @@ a:hover .header-profile-image {
   opacity: 1;
 }
 .user-header-dropdown-toggle {
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 .error-text {
   display: none;
@@ -38,3 +38,4 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+ng-map {width:500px; height:550px;position: absolute;}
