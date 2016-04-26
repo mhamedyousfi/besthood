@@ -12,5 +12,5 @@ module.exports = function (app) {
 
   // Define application route
   app.route('/*').get(core.renderIndex);
-  app.route('/contact-form').post(core.sendMail);
+  app.route('/sendContact').post(core.sendContact);
 };

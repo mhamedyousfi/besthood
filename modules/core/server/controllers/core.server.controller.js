@@ -59,20 +59,23 @@ exports.renderNotFound = function (req, res) {
     }
   });
 };
-exports.sendMail = function(req, res) {
 var gmTransport = nodemailer.createTransport('SMTP',{
   service: 'Gmail',
   auth: {
-    user: 'bmt.transportpublic@gmail.com',
-    pass: 'azerty100'
+    user: 'oumaima.bouyahi@esprit.tn',
+    pass: '22506954o'
   }
 });
 
+exports.sendContact = function(req, res) {
+
+  // logs to grunt task
+  console.log('sent inquiry');
+
   var mailOptions = {
-    from: 'bmt.transportpublic@gmail.com',
-    to: 'oumaima.bouyahi@gmail.com',
-    subject: 'Message from oumaima',
-    text: 'hello'
+    to : 'mhamed.yousfi@esprit.tn',
+    subject : 'Inquiry from: [' + req.body.name + ']',
+    html: req.body.inquiry
   };
 
   gmTransport.sendMail(mailOptions, function(error, response){
@@ -83,6 +86,5 @@ var gmTransport = nodemailer.createTransport('SMTP',{
     }
   });
 };
-
 
 
