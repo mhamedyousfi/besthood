@@ -5,10 +5,24 @@
   <div class="form-group text-center">
     <img ng-src="{{imageURL}}" alt="{{project.displayName}}" class="img-thumbnail ">
   </div>
-  <map center="[0,0]" zoom="1">
-    <marker  animation = "Animation.BOUNCE" position='[{{project.lat}},{{project.lon}}]' visible="true" on-click="gotolink(event,project)" title="{{project.user.displayName}}">
-    </marker>
-  </map>
+  <div class="row">
+    <div class="col-lg-6">
+      <ng-map center="[{{lat}},{{lon}}]" zoom="18">
+        <marker position="[{{lat}},{{lon}}]" title="{{vm.project.user.displayName}}" visible="true"></marker>
+        <shape
+          name="circle"
+          radius="50"
+          center="[{{lat}}, {{lon}}]"
+          stroke-opacity="1"
+          fill-color="red"
+        />
+        <control name="overviewMap" opened="true" />
+      </ng-map>
+    </div>
+    <div class="col-lg-6">
+      <div class="page-header">
+        <h1 data-ng-bind="vm.project.name"></h1>
+      </div>
   <div class="pull-right"
        data-ng-show="vm.project.isCurrentUserOwner">
     <a class="btn btn-primary"
@@ -19,7 +33,7 @@
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
-  <img ng-src="{{aut.user.profileImageURL}}" class="header-profile-image" />
+  <img ng-src="{{vm.project.user.profileImageURL}}" class="pull-left chat-profile-image" />
   <small>
     <em class="text-muted">
       Posted on
@@ -31,4 +45,6 @@
     </em>
   </small>
   <p class="lead" data-ng-bind="vm.project.content"></p>
+      </div>
+    </div>
 </section>

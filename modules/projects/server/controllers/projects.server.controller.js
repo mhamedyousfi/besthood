@@ -103,7 +103,7 @@ exports.projectByID = function(req, res, next, id) {
     });
   }
 
-  Project.findById(id).populate('user', 'displayName').exec(function (err, project) {
+  Project.findById(id).populate('user').exec(function (err, project) {
     if (err) {
       return next(err);
     } else if (!project) {

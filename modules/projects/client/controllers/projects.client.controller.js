@@ -18,6 +18,17 @@
     vm.remove = remove;
     vm.save = save;
 
+    if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      $scope.$apply(function () {
+        $scope.lat = vm.project.lat;
+        $scope.lon = vm.project.lon;
+        vm.project.lat = position.coords.latitude;
+        vm.project.lon = position.coords.longitude;
+
+      });
+    });
+  }
     // Remove existing Project
     function remove() {
       if (confirm('Are you sure you want to delete?')) {
