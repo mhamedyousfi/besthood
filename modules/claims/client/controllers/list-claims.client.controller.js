@@ -6,10 +6,10 @@
     .controller('ClaimsListController', ClaimsListController);
 
   ClaimsListController.$inject = ['ClaimsService'];
-
   function ClaimsListController(ClaimsService) {
     var vm = this;
 
     vm.claims = ClaimsService.query();
+
   }
 })();

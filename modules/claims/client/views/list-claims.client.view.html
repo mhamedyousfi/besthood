@@ -19,10 +19,7 @@
     <h1>Claims</h1>
   </div>
   <div class="list-group">
-    <a data-ng-repeat="claim in vm.claims"
-       data-ui-sref="claims.view({ claimId: claim._id })"
-
-       class="list-group-item">
+    <a  data-ng-repeat="claim in vm.claims" data-ui-sref="claims.view({ claimId: claim._id })" class="list-group-item">
 
       <img ng-src="{{claim.user.profileImageURL}}" alt="{{claim.user.displayName}}" class="header-profile-image" />
       <small class="list-group-item-text">
@@ -31,9 +28,12 @@
         by
 
         <span data-ng-if="claim.user" data-ng-bind="claim.user.displayName"></span>
+
         <span data-ng-if="!claim.user">Deleted User</span>
       </small>
       <h4 class="list-group-item-heading" data-ng-bind="claim.name"></h4>
+      <h4 class="list-group-item-heading" data-ng-bind="claim.user.displayName"></h4>
+      <h4 class="list-group-item-heading" data-ng-bind="claim.user.community"></h4>
 
     </a>
   </div>

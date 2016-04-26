@@ -6,9 +6,9 @@
     .module('communities')
     .controller('CommunitiesController', CommunitiesController);
 
-  CommunitiesController.$inject = ['$scope', '$state', 'Authentication', 'communityResolve'];
+  CommunitiesController.$inject = ['$scope', '$state', 'Authentication', 'communityResolve', 'weatherService'];
 
-  function CommunitiesController ($scope, $state, Authentication, community) {
+  function CommunitiesController ($scope, $state, Authentication, community, weatherService) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -17,6 +17,24 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+
+    function fetchWeather(place) {
+      weatherService.getWeather(place).then(function(data){
+        vm.community.city = data.location.city;
+        vm.community.country = data.location.country;
+        vm.community.lat = data.item.lat;
+        vm.community.lon = data.item.long;
+        vm.community.link = data.item.link;
+
+      });
+    }
+
+    fetchWeather(vm.community.city);
+    $scope.findWeather = function(place) {
+      $scope.place = '';
+      fetchWeather(place);
+    };
+
 
     // Remove existing Community
     function remove() {
@@ -40,14 +58,16 @@
       }
 
       function successCallback(res) {
+
         $state.go('communities.view', {
           communityId: res._id
         });
-      }
-
+      };
       function errorCallback(res) {
         vm.error = res.data.message;
       }
+
+
     }
   }
 })();

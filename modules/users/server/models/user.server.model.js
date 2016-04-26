@@ -88,7 +88,9 @@ var UserSchema = new Schema({
     type: Date
   },
   community: {
-    type: String
+    type: String,
+    trim: true,
+    default: '',
   },
   created: {
     type: Date,

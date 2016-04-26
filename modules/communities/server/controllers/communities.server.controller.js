@@ -81,7 +81,7 @@ exports.delete = function(req, res) {
  * List of Communities
  */
 exports.list = function(req, res) { 
-  Community.find().sort('-created').populate('user', 'displayName').exec(function(err, communities) {
+  Community.find().sort('-created').populate('user').exec(function(err, communities) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)

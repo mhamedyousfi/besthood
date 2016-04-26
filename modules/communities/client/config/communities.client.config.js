@@ -13,7 +13,7 @@
       title: 'Communities',
       state: 'communities',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['admin']
     });
 
     // Add the dropdown list item
@@ -26,7 +26,7 @@
     Menus.addSubMenuItem('topbar', 'communities', {
       title: 'Create Community',
       state: 'communities.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 })();

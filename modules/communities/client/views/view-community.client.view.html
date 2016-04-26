@@ -1,6 +1,21 @@
 <section>
+  <div class="row">
+  <div class="col-lg-6">
+    <ng-map center="[{{vm.community.lat}},{{vm.community.lon}}]" zoom="18">
+      <marker position="[{{vm.community.lat}},{{vm.community.lon}}]" title="{{vm.community.city}}" visible="true"></marker>
+      <shape
+        name="circle"
+        radius="50"
+        center="[{{vm.community.lat}}, {{vm.community.lon}}]"
+        stroke-opacity="1"
+        fill-color="red"
+      />
+      <control name="overviewMap" opened="true" />
+    </ng-map>
+  </div>
+        <div class="col-lg-6">
   <div class="page-header">
-    <h1 data-ng-bind="vm.community.name"></h1>
+    <h1 data-ng-bind="vm.community.city"></h1>
   </div>
   <div class="pull-right"
        data-ng-show="vm.community.isCurrentUserOwner">
@@ -22,5 +37,7 @@
       <span data-ng-if="!vm.community.user">Deleted User</span>
     </em>
   </small>
-  <p class="lead" data-ng-bind="vm.community.content"></p>
+  <h2 class="lead" data-ng-bind="vm.community.city"></h2>
+  <h3 class="lead" data-ng-bind="vm.community.country"></h3>
+          </div></div>
 </section>

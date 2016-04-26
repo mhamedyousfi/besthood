@@ -13,7 +13,8 @@
         <span data-ng-if="community.user" data-ng-bind="community.user.displayName"></span>
         <span data-ng-if="!community.user">Deleted User</span>
       </small>
-      <h4 class="list-group-item-heading" data-ng-bind="community.name"></h4>
+      <h4 class="list-group-item-heading" data-ng-bind="community.city"></h4>
+      <h4 class="list-group-item-heading" data-ng-bind="community.country"></h4>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.communities.$resolved && !vm.communities.length">

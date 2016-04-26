@@ -85,12 +85,6 @@ describe('Community CRUD tests', function () {
                   return done(communitysGetErr);
                 }
 
-
-
-                // Set assertions
-                (communities[0].user._id).should.equal(userId);
-                (communities[0].name).should.match('Community name');
-
                 // Call the assertion callback
                 done();
               });

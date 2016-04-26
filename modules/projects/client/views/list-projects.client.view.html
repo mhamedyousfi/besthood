@@ -7,7 +7,7 @@
     <a data-ng-repeat="project in vm.projects"
        data-ui-sref="projects.view({ projectId: project._id })"
        class="list-group-item">
-      <img ng-src="{{vm.authentication.user.profileImageURL}}" alt="{{projet.user.displayName}}" class="header-profile-image" />
+      <img ng-src="{{project.user.profileImageURL}}" alt="{{projet.user.displayName}}" class="header-profile-image" />
 
       <small class="list-group-item-text">
         Posted on

@@ -15,15 +15,18 @@
     vm.claim = claim;
     vm.error = null;
     vm.form = {};
+    vm.lat = 0;
+    vm.lon = 0;
     vm.remove = remove;
     vm.save = save;
 
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position){
-        $scope.$apply(function(){
-
-          vm.claim.latt = position.coords.latitude;
-          vm.claim.lonn = position.coords.longitude;
+      navigator.geolocation.getCurrentPosition(function (position) {
+        $scope.$apply(function () {
+          $scope.lat = vm.claim.lat;
+          $scope.lon = vm.claim.lon;
+          vm.claim.lat = position.coords.latitude;
+          vm.claim.lon = position.coords.longitude;
 
         });
       });

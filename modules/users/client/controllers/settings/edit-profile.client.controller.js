@@ -3,7 +3,7 @@
 angular.module('users').controller('EditProfileController', ['$scope', '$http', '$location', 'Users', 'Authentication','CommunitiesService',
   function ($scope, $http, $location, Users, Authentication,CommunitiesService) {
     $scope.user = Authentication.user;
-    $scope.com = Authentication.user.community;
+    $scope.community = Authentication.user.community;
     $scope.communities = CommunitiesService.query();
     // Update a user profile
     $scope.updateUserProfile = function (isValid) {

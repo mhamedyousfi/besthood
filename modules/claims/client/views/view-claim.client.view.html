@@ -1,12 +1,12 @@
 <section>
   <div class="row">
     <div class="col-lg-6">
-  <ng-map center="[{{vm.claim.lat}},{{vm.claim.lon}}]" zoom="18">
-    <marker position="[{{vm.claim.lat}},{{vm.claim.lon}}]" title="{{vm.claim.user.displayName}}" visible="true"></marker>
+  <ng-map center="[{{lat}},{{lon}}]" zoom="18">
+    <marker position="[{{lat}},{{lon}}]" title="{{vm.claim.user.displayName}}" visible="true"></marker>
     <shape
       name="circle"
       radius="50"
-      center="[{{vm.claim.lat}}, {{vm.claim.lon}}]"
+      center="[{{lat}}, {{lon}}]"
       stroke-opacity="1"
       fill-color="red"
     />

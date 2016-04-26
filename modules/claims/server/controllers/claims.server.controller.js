@@ -15,7 +15,6 @@ var path = require('path'),
 exports.create = function(req, res) {
   var claim = new Claim(req.body);
   claim.user = req.user;
-
   claim.save(function(err) {
     if (err) {
       return res.status(400).send({
@@ -80,16 +79,15 @@ exports.delete = function(req, res) {
 /**
  * List of Claims
  */
-exports.list = function(req, res) {
+exports.list = function(req,res) {
 
   Claim.find()
-      .sort('-created').populate('user', 'displayName profileImageURL').exec(function(err, claims) {
+      .sort('-created').populate('user').exec(function(err, claims) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-
       res.jsonp(claims);
     }
   });
@@ -106,7 +104,7 @@ exports.claimByID = function(req, res, next, id) {
     });
   }
 
-  Claim.findById(id).populate('user', 'displayName profileImageURL').exec(function (err, claim) {
+  Claim.findById(id).populate('user').exec(function (err, claim) {
     if (err) {
       return next(err);
     } else if (!claim) {
