@@ -12,7 +12,12 @@
     Menus.addMenu('account', {
       roles: ['user']
     });
-
+    // Set top bar menu items
+    Menus.addMenuItem('topbar', {
+      title: 'Contact',
+      state: 'contact',
+      roles: ['*']
+    });
     Menus.addMenuItem('account', {
       title: '',
       state: 'settings',

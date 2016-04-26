@@ -1,7 +1,6 @@
 'use strict';
-angular.module('core').controller('ContactController', ['$scope', '$http', '$location',
-    function($scope, $http, $location) {
-
+angular.module('core').controller('ContactFormController', ['$scope', '$http','$state',
+    function($scope, $http, $state) {
         // the naming of our data model is consistent
         $scope.guest = {};
         $scope.sent = false;
@@ -13,12 +12,9 @@ angular.module('core').controller('ContactController', ['$scope', '$http', '$loc
             // an http request is posted to the server
             // *** IMPORTANT IMPORTANT ***
 
-            $http.post('/', $scope.guest)
+            $http.post('/contact-form')
                 .success(function(response) {
                     console.log('Success! :D');
-
-                    //logs to browser console (Chrome F12)
-
                 }).error(function(response) {
                     console.log(response);
                 });
@@ -26,5 +22,7 @@ angular.module('core').controller('ContactController', ['$scope', '$http', '$loc
             $scope.contactForm.$setPristine();
             $scope.guest = {};
             $scope.sent = true;
+
+
         };
     }]);

@@ -66,12 +66,12 @@ module.exports = {
     sandbox: true
   },
   mailer: {
-    from: process.env.MAILER_FROM || 'oumaima.bouyahi@esprit.tn',
+    from: process.env.MAILER_FROM || 'bmt.transportpublic@gmail.com',
     options: {
       service: process.env.MAILER_SERVICE_PROVIDER || 'Gmail',
       auth: {
-        user: process.env.MAILER_EMAIL_ID || '456350616848-5p747s0heqigmq23s50c7nmrmt32qicu.apps.googleusercontent.com',
-        pass: process.env.MAILER_PASSWORD || 'NBDbgMhsaP8YXsJIBWaTa-wE'
+        user: process.env.MAILER_EMAIL_ID || '82053308351-e99rd3i3lm1ts1jolrr7h2c6dlosdedf.apps.googleusercontent.com',
+        pass: process.env.MAILER_PASSWORD || 'oF1clVzvnt4j3wQimX8XpNwY'
       }
     }
   },

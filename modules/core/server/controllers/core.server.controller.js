@@ -1,10 +1,8 @@
 'use strict';
 
-var validator = require('validator');
+var validator = require('validator'),
+    nodemailer = require('nodemailer');
 
-/**
- * Render the main application page
- */
 exports.renderIndex = function (req, res) {
 
   var safeUserObject = null;
@@ -61,3 +59,30 @@ exports.renderNotFound = function (req, res) {
     }
   });
 };
+exports.sendMail = function(req, res) {
+var gmTransport = nodemailer.createTransport('SMTP',{
+  service: 'Gmail',
+  auth: {
+    user: 'bmt.transportpublic@gmail.com',
+    pass: 'azerty100'
+  }
+});
+
+  var mailOptions = {
+    from: 'bmt.transportpublic@gmail.com',
+    to: 'oumaima.bouyahi@gmail.com',
+    subject: 'Message from oumaima',
+    text: 'hello'
+  };
+
+  gmTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+    }else{
+      console.log('Message sent: ' + response.message);
+    }
+  });
+};
+
+
+
