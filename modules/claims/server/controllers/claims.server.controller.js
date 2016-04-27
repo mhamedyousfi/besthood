@@ -10,6 +10,7 @@ var path = require('path'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   _ = require('lodash');
 
+
 /**
  * Create a Claim
  */
@@ -26,7 +27,6 @@ exports.create = function(req, res) {
     }
   });
 };
-
 /**
  * Show the current Claim
  */
