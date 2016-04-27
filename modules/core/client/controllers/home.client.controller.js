@@ -13,7 +13,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
     }
 
 
-    fetchWeather('84105');
+    fetchWeather('ariana');
     $scope.findWeather = function(place) {
       $scope.place = '';
       fetchWeather(place);
