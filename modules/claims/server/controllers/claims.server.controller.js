@@ -30,6 +30,7 @@ exports.create = function(req, res) {
 /**
  * Show the current Claim
  */
+
 exports.read = function(req, res) {
   // convert mongoose document to JSON
   var claim = req.claim ? req.claim.toJSON() : {};
