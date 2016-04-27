@@ -38,9 +38,10 @@ exports.read = function(req, res) {
   // Add a custom field to the Article, for determining if the current User is the "owner".
   // NOTE: This field is NOT persisted to the database, since it doesn't exist in the Article model.
   claim.isCurrentUserOwner = req.user && claim.user && claim.user._id.toString() === req.user._id.toString() ? true : false;
-  claim.isCommunity = req.user && claim.user && claim.user.community === req.user.community ? true : false;
+  claim.isCommunity = req.user && claim.user && claim.user.community.city === req.user.community.city ? true : false;
   res.jsonp(claim);
 };
+
 
 /**
  * Update a Claim
@@ -84,7 +85,7 @@ exports.delete = function(req, res) {
 exports.list = function(req,res) {
 
   Claim.find()
-      .sort('-created').populate('user').exec(function(err, claims) {
+      .sort('-created').deepPopulate('user user.community').exec(function(err, claims) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -112,7 +113,7 @@ exports.claimByID = function(req, res, next, id) {
     });
   }
 
-  Claim.findById(id).populate('user').exec(function (err, claim) {
+  Claim.findById(id).deepPopulate('user user.community').exec(function (err, claim) {
     if (err) {
       return next(err);
     } else if (!claim) {

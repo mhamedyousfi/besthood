@@ -171,6 +171,7 @@ exports.saveOAuthUserProfile = function (req, providerUserProfile, done) {
             });
           });
         } else {
+          User.deepPopulate('community');
           return done(err, user);
         }
       }

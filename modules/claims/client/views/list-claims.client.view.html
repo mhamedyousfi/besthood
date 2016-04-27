@@ -19,6 +19,7 @@
     <h1>Claims</h1>
   </div>
   <div class="list-group">
+
     <a  data-ng-repeat="claim in vm.claims" data-ui-sref="claims.view({ claimId: claim._id })" class="list-group-item">
 
       <img ng-src="{{claim.user.profileImageURL}}" alt="{{claim.user.displayName}}" class="header-profile-image" />

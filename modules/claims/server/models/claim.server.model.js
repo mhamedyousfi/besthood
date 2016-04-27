@@ -5,7 +5,7 @@
  */
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
-
+var deepPopulate = require('mongoose-deep-populate')(mongoose);
 /**
  * Claim Schema
  */
@@ -43,5 +43,5 @@ var ClaimSchema = new Schema({
     ref: 'User'
   }
 });
-
+ClaimSchema.plugin(deepPopulate);
 mongoose.model('Claim', ClaimSchema);

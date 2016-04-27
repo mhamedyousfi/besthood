@@ -17,7 +17,7 @@ exports.userByID = function (req, res, next, id) {
     });
   }
 
-  User.findOne({_id: id}).exec(function (err, user) {
+  User.findOne({_id: id}).deepPopulate('community').exec(function (err, user) {
     if (err) {
       return next(err);
     } else if (!user) {
