@@ -87,33 +87,40 @@
 
       <!-- Intro -->
       <section id="intro">
-        <a href="#" class="logo" ><img src="img/logo-o.png" alt=""/></a>
+        <ul>
+
+          <video controls poster="img/jawhra-fm.png">
+            <br>
+            <source src="http://streaming2.toutech.net:8000/jawharafm">Radio Jawhra </source>
+          </video>
+
+        </ul>
+
         <header>
           <h2>Best Hood</h2>
 
           <p>In Union There is Strength</p>
+
         </header>
       </section>
 
       <!-- Mini Posts -->
       <section>
         <div class="mini-posts">
-          <form>
+        <center> <form>
             <input type="text" ng-model="l">
-            <input type="submit" class="btn btn-block" value="Search" ng-click="findWeather(l)">
+            <input type="submit" value="Search" ng-click="findWeather(l)">
           </form>
           <p ng-show="l">Searching the forecasts for: {{l}}</p>
           <div>
-            <h2>Forecast For: {{ place.location.city }}</h2>
-            <h2>Latitude: {{ place.item.lat }}</h2>
-            <h2>Longitude For: {{ place.item.long }}</h2>
-            <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+            <h1>Weather For: {{ place.location.city }}</h1>
+            <h2>currently: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
             <div ng-repeat="forecast in place.item.forecast">
               <p><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</p>
               <p>H: {{ forecast.high }}&deg; | L: {{ forecast.low }}&deg;</p>
             </div>
           </div>
-
+        </center>
         </div>
       </section>
       <section class="blurb">
@@ -164,6 +171,14 @@
               <a href="#" class="image"><img src="img/ferdaws.jpg" alt=""/></a>
             </article>
           </li>
+
+
+
+          </li>
+
+
+
+
 
         </ul>
       </section>
