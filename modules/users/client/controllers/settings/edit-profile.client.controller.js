@@ -16,7 +16,6 @@ angular.module('users').controller('EditProfileController', ['$scope', '$http', 
       }
 
       var user = new Users($scope.user);
-
       user.$update(function (response) {
         $scope.$broadcast('show-errors-reset', 'userForm');
 

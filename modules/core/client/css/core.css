@@ -16,8 +16,8 @@
 }
 .header-profile-image {
   opacity: 0.8;
-  height: 42px;
-  width: 42px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   margin-right: 5px;
 }
@@ -38,4 +38,4 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
-ng-map {width:500px; height:550px;position: absolute;}
+ng-map {width:500px; height:550px;}

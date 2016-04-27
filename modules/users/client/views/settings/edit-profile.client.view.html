@@ -32,10 +32,11 @@
           </div>
         </div>
         <div class="form-group" show-errors>
-          <label for="community" >Community :{{user.community}}</label>
+          <label for="community" >Community : {{ user.community.city }}</label>
           <select   id="community" name="community" ng-model="user.community" class="form-control" required>
-            <option data-ng-repeat="c in communities" value="{{c.name}}"  class="list-group-item">
-              {{ c.name }}
+            <option value="">---Please select---</option>
+            <option data-ng-repeat="community in communities"   value="{{ community._id }}" class="list-group-item">
+                  {{ community.city }}
             </option>
           </select>
         </div>

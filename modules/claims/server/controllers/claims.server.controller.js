@@ -6,6 +6,7 @@
 var path = require('path'),
   mongoose = require('mongoose'),
   Claim = mongoose.model('Claim'),
+    Community = mongoose.model('Community'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   _ = require('lodash');
 
@@ -88,6 +89,12 @@ exports.list = function(req,res) {
         message: errorHandler.getErrorMessage(err)
       });
     } else {
+      for (var i = 0, len = claims.length; i < len; i++) {
+        Community.populate(claims[i].user,
+            { path : 'user.community',
+              select: 'city',
+              model: 'Community'});
+      }
       res.jsonp(claims);
     }
   });
@@ -112,6 +119,10 @@ exports.claimByID = function(req, res, next, id) {
         message: 'No Claim with that identifier has been found'
       });
     }
+    Community.populate(claim.user,
+        { path : 'user.community',
+          select: 'city',
+          model: 'Community'});
     req.claim = claim;
     next();
   });

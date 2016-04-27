@@ -103,7 +103,7 @@ exports.communityByID = function(req, res, next, id) {
     });
   }
 
-  Community.findById(id).populate('user', 'displayName').exec(function (err, community) {
+  Community.findById(id).populate('user').exec(function (err, community) {
     if (err) {
       return next(err);
     } else if (!community) {

@@ -35,11 +35,11 @@
       Posted On
       <span data-ng-bind="vm.claim.created | date:'mediumDate'"></span>
       by
-      <span data-ng-if="vm.claim.user"
-            data-ng-bind="vm.claim.user.displayName"></span>
+      <span data-ng-if="vm.claim.user" data-ng-bind="vm.claim.user.displayName"></span>
       <span data-ng-if="!vm.claim.user">Deleted User</span>
     </em>
   </small>
+  <h2 class="title" data-ng-bind="vm.claim.user.community.city"></h2>
   <p class="lead" data-ng-bind="vm.claim.content"></p>
 </div>
   </div>

@@ -88,9 +88,8 @@ var UserSchema = new Schema({
     type: Date
   },
   community: {
-    type: String,
-    trim: true,
-    default: '',
+    type: Schema.ObjectId,
+    ref: 'Community'
   },
   created: {
     type: Date,
@@ -209,4 +208,6 @@ UserSchema.statics.generateRandomPassphrase = function () {
   });
 };
 
+
 mongoose.model('User', UserSchema);
+
